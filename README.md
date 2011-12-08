@@ -40,6 +40,13 @@ for f in $(ls /foo/bar/); do
 done
 ```
 
+One thing to note is that lines with no non-whitespaces characters are not considered when determining the
+indentation of a text block:
+
+```
+"\n  foo".dedent # => "\nfoo"
+```
+
 Author
 ------
 
