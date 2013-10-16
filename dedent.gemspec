@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Caleb Spare"]
   s.email       = ["cespare@gmail.com"]
   s.homepage    = "https://github.com/cespare/ruby-dedent"
+  s.license     = "MIT"
   s.summary     = %q{Adds a dedent method to String.}
   s.description = <<-EOS
 This gem adds a dedent method to strings to strip leading spaces from each line while preserving indentation.
@@ -19,8 +20,4 @@ This gem adds a dedent method to strings to strip leading spaces from each line 
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
-
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
 end
