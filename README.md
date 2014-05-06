@@ -6,7 +6,7 @@ Installation
 
     gem install dedent
 
-Only tested with Ruby 1.9.2 and 1.8.7.
+Tested with Ruby 1.9.3 and 2.1.1.
 
 Usage
 -----
@@ -15,9 +15,9 @@ This is a tiny gem that adds the `dedent` method to String. This method strips l
 line, preserving indentation. So, the line with the least amount of leading whitespace will have all leading
 whitespace removed, while other lines will have whitespace relative to that line's offset.
 
-The main use of this is with heredocs. It can be annoying because even with the `<<-` form of heredocs, all
-the initial whitespace on each line of the string is preserved, so if you keep the string in the same
-indentation as the code, you end up with a bunch of extra space.
+The main use of this is with heredocs. It can be annoying because even with the `<<-` form, all the initial
+whitespace on each line of the string is preserved, so if you keep the string in the same indentation as the
+code, you end up with extra space.
 
 Here's an example of using dedent with heredocs:
 
@@ -40,7 +40,7 @@ for f in $(ls /foo/bar/); do
 done
 ```
 
-One thing to note is that lines with no non-whitespaces characters are not considered when determining the
+One thing to note is that lines with no non-whitespace characters are not considered when determining the
 indentation of a text block:
 
 ```

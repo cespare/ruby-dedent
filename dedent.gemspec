@@ -20,4 +20,6 @@ This gem adds a dedent method to strings to strip leading spaces from each line 
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_development_dependency "minitest"
 end

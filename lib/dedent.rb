@@ -1,5 +1,3 @@
-require "dedent/version"
-
 class String
   def dedent
     lines = split "\n"
