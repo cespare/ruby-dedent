@@ -5,8 +5,14 @@ require "dedent"
 
 class DedentTest < Minitest::Test
   def test_basic
-    assert_equal "", "".dedent
     assert_equal "foobar", "   foobar".dedent
+  end
+
+  def test_whitespace
+    assert_equal "", "".dedent
+    assert_equal "", "   ".dedent
+    assert_equal "", "   \n".dedent
+    assert_equal "\n", "   \n   ".dedent
   end
 
   def test_multiple_lines
